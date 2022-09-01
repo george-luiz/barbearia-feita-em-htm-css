@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Barbearia Alura</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <div class="caixa">
+                <img src="img/logo.png" alt="Logo Principal">
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contatos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </h1>
+    </header>
+    <main>
+        <div class="corpo-principal">
+            <form action="">
+                <label for="nomesobrenome">Nome e Sobrenome</label>
+                <input type="text" name="nomesobrenome" id="nomesobrenome" class="input-padrao" required>
+    
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="input-padrao" required
+                    placeholder="seuemail@dominio.com">
+    
+                <label for="telefone">Telefone</label>
+                <input type="tel" name="telefone" id="telefone" class="input-padrao" required placeholder="(xx) xxxx-xxxx">
+    
+                <label for="mensagem">Mensagem</label>
+                <textarea name="mensagem" id="mensagem" cols="70" rows="10"  class="input-padrao" required></textarea>
+    
+                <fieldset> <!--È como se fosse uma tag div só que mais semantico-->
+                    <legend>Como prefere o nosso contato:</legend> <!--È como se fosse uma tag p só que mais semantico-->
+                    <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">Email</label>
+                    <!-- Colocando o campo name nos input do tipo radio pode ficar alterando entre os três radio -->
+    
+                    <label for="radio-telefone"><input type="radio" name="contato" value="telefone"
+                            id="radio-telefone">Telefone</label>
+    
+                    <label for="radio-whatsapp"><input type="radio" name="contato" value="Whatsapp"
+                            id="radio-whatsapp" checked>Whatsapp</label>
+                </fieldset>
+    
+                <fieldset>
+                        <legend>Qual horário prefere ser atendido?</legend>
+                            <select>
+                                <option value="">Manhã</option>
+                                <option value="">Tarde</option>            
+                                <option value="">Noite</option>            
+                            </select>
+                </fieldset>
+    
+                <label><input class="checkbox" type="checkbox" checked />Gostaria de receber nossas novidades por email?</label>
+                <input type="submit" value="Enviar Formulário" class="enviar">
+            </form>
+    
+            <table>
+                <thead><!--Cabeçario da tabela -->
+                    <tr><!--linha para a tabela -->
+                        <th>Dia</th><!--Celula para cabeçario-->
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                <tbody> <!--Corpo da tabela-->
+                    <tr>
+                        <td>Segunda</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta</td>
+                        <td>8h ~ 20h</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <img src="img/logo-branco.png" alt="logo branco">
+        <p class="Copyright">&copy; Copyright Barbearia Alura</p>
+    </footer>
+</body>
+
+</html>

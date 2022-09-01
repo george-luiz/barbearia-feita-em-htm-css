@@ -1,0 +1,328 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #bbbbbb;
+    padding: 16px 0;
+}
+
+.caixa {
+    position: relative; /*como a nav está absolute o container tem que ficar relative*/
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute; /*absolute para poder ficar no meio e na direita sem alterar os outros*/
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase; /*deixar em letra maisculas*/
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none; /*tirar a linha de baixo da tag a*/
+}
+
+nav a:hover { /*hover comportamente de quando o mouse passa por cima*/ 
+    color: #C78C19;
+    text-decoration: underline; /*colocar o estilo sublinhado da tag a*/
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box; /*css por padrão soma a margin e o padding e para deixar tudo dentro a propriedade box-sizing faz isso*/
+    /* border-color: #000000;
+    border-width: 2px;
+    border-style: solid; */
+    border: 2px #000000 solid;
+    border-radius: 10px;
+}
+
+.corpo-principal {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.produtos li:hover { /*hover quando passar o mouse*/
+    border-color: #C78C19;
+    font-size: 40px;
+}
+
+.produtos li:active { /*active quando clicar*/
+    border-color: #088C19;
+}
+
+.produtos h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.produtos-descricao {
+    font-size: 18px;
+}
+
+.produtos-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    background: url("../img/bg.jpg"); /*Colocar a imagem como background*/
+    padding: 40px 0;
+}
+
+.Copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0;
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 20px 0;
+}
+
+.input-padrao {
+    display: block;
+    margin: 0 0 20px 0;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 20px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none; /*sem borda no botão*/
+    border-radius: 5px;
+    transition: 1s all;/*tempo transição para tudo*/
+    cursor: pointer; /*colocar uma mão(mouse) quando ir para o botão*/
+}
+
+.enviar:hover {
+    background-color: darkorange;
+    /* transform: rotate(1000deg) scale(3); */
+    transform: scale(1.2);/*transforma a fonte aumenta a fonte ao passar o mouse*/
+}
+
+table {
+    margin: 20px 0 40px;/*margin para cima para a direita e para baixo*/
+}
+
+thead {
+    background-color: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+
+/*CSS da pagina inicia */
+.banner {
+    width: 100%;
+}
+
+.principal {
+    padding: 3em 0;
+    background-color: #fefefe;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left; /*limpa a esquerda do float da imagem*/
+    /* color: rgba(0, 0, 0, 0.3); Opacidade para cores de fontes */
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px;
+    float: left; /*Elemento flutua sobre o outro a esquerda*/
+    margin:  0 20px 20px 0;
+}
+
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#fefefe, #888888); /*linear-gradient: transição de cores de uma para outra*/
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background-color: #888888;
+}
+
+.lista-beneficios{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top; /*por padrão é alinhado pela parte de baixo, muda esse padrão para alinha pela parte de cima*/
+}
+
+.itens {
+    line-height: 1.5em;
+}
+
+.itens::before { /*:before : Antes de qualquer elemento desta classe colocar a estrela.*/
+    content: "★";
+}
+
+.itens:first-child { /*pseudo elementos: (first-child) pega o primeiro elemento*/
+    font-weight: bold;
+}
+
+/* .itens:nth-child(2n) { pseudo elementos: elementos pares com o (n) e sem o n qualquer elemento que colocar o número
+    font-weight: bold;
+} */
+
+.imagem-beneficios {
+    width: 60%;
+    opacity: 1; /*Colocar opacidade na imagem vai de 0 a 1*/
+    transition: 400ms; /* vai demorar 400ms a transição*/
+    box-shadow: 10px 10px 10px 0 #000000; /*Colocar sombra na imagem*/
+}
+
+.imagem-beneficios:hover {
+    opacity: 0.7; /*Colocar opacidade na imagem vai de 0 a 1*/
+}
+
+.video {
+    width: 560px;
+    margin: 2rem auto;
+}
+
+/* main > p { pegar 1 primeiro filho
+    background-color: red;
+}
+
+main + p { pegar 1 primeiro irmão
+    background-color: blue;
+}
+
+img ~ p { pegar todos os p das img 
+    background-color: #088C19;
+} 
+
+.principal p:not(#missão) { selecionar todos os elementos p dentro da classe .principal menos o p com o id(#missão)
+    background-color: #088C19;
+}*/
+
+
+ /* Layout para mobile */
+
+@media screen and (max-width: 480px)  {
+
+    /* Layout mobile para index */
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
+
+
+    /* Layout mobile para produtos */
+    .produtos {
+        width: 100%;
+    }
+
+    .produtos li {
+        display: block;
+        width: 85%;
+        margin: 20px auto;
+    }
+    
+
+    /* Layout mobile para contato */
+    .corpo-principal {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .input-padrao {
+        width: 80%;
+    }
+
+    .enviar {
+        width: 100%;
+    }
+
+    table {
+        margin: 20px auto;
+    }
+
+}
